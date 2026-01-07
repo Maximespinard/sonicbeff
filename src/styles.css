@@ -25,8 +25,9 @@ code {
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
+  /* SonicBeff Brand: Golden Yellow */
+  --primary: oklch(0.7686 0.1647 70.0804);
+  --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
@@ -52,6 +53,12 @@ code {
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.871 0.006 286.286);
+
+  /* Animation Variables */
+  --hero-animation-duration: 700ms;
+  --hero-animation-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --entrance-delay-base: 100ms;
+  --entrance-delay-increment: 80ms;
 }
 
 .dark {
@@ -61,8 +68,9 @@ code {
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.141 0.005 285.823);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.21 0.006 285.885);
+  /* SonicBeff Brand: Same golden yellow in dark mode */
+  --primary: oklch(0.7686 0.1647 70.0804);
+  --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
@@ -135,4 +143,87 @@ code {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ============================================
+   SONICBEFF ANIMATION KEYFRAMES
+   ============================================ */
+
+@keyframes speed-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-chevron-1 {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(4px); opacity: 0.2; }
+}
+
+@keyframes float-chevron-2 {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(4px); opacity: 0.4; }
+}
+
+@keyframes float-chevron-3 {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(4px); opacity: 0.8; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 oklch(0.7686 0.1647 70.0804 / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px oklch(0.7686 0.1647 70.0804 / 0.1);
+  }
+}
+
+/* ============================================
+   SONICBEFF UTILITY CLASSES
+   ============================================ */
+
+.hero-entrance {
+  animation: speed-reveal var(--hero-animation-duration) var(--hero-animation-easing) forwards;
+}
+
+.stagger-1 { animation-delay: calc(var(--entrance-delay-base) + var(--entrance-delay-increment) * 1); }
+.stagger-2 { animation-delay: calc(var(--entrance-delay-base) + var(--entrance-delay-increment) * 2); }
+.stagger-3 { animation-delay: calc(var(--entrance-delay-base) + var(--entrance-delay-increment) * 3); }
+.stagger-4 { animation-delay: calc(var(--entrance-delay-base) + var(--entrance-delay-increment) * 4); }
+.stagger-5 { animation-delay: calc(var(--entrance-delay-base) + var(--entrance-delay-increment) * 5); }
+
+.animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+.animate-float-chevron-1 { animation: float-chevron-1 2s ease-in-out infinite; }
+.animate-float-chevron-2 { animation: float-chevron-2 2s ease-in-out infinite 0.2s; }
+.animate-float-chevron-3 { animation: float-chevron-3 2s ease-in-out infinite 0.4s; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* Font families for Coming Soon page */
+.font-display {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
