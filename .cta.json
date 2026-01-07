@@ -1,0 +1,28 @@
+{
+  "projectName": "sonicbeff",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "npm",
+  "git": true,
+  "addOnOptions": {
+    "prisma": {
+      "database": "postgres"
+    }
+  },
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "start",
+    "cloudflare",
+    "tanstack-query",
+    "form",
+    "table",
+    "clerk",
+    "neon",
+    "prisma",
+    "shadcn",
+    "eslint",
+    "nitro"
+  ]
+}
