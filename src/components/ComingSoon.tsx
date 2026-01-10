@@ -1,6 +1,6 @@
 export function ComingSoon() {
   return (
-    <div className="bg-background relative h-screen overflow-hidden">
+    <div className="bg-background fixed inset-0 overflow-hidden" style={{ height: '100dvh' }}>
       {/* Grain texture overlay */}
       <div className="grain-overlay" />
 
