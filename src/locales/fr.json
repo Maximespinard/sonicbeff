@@ -1,0 +1,82 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "search": "Rechercher",
+    "noResults": "Aucun résultat trouvé"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "cart": "Panier",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "team": "Équipe Riders",
+    "legal": "Mentions légales"
+  },
+  "comingSoon": {
+    "brand": "SonicBeff",
+    "tagline": "Quelque chose de rapide arrive",
+    "subtitle": "Matériel de descente. Conçu par des riders.",
+    "description": "Nous préparons quelque chose de spécial pour vous.",
+    "badge": "Bientôt disponible"
+  },
+  "notFound": {
+    "title": "Sentier introuvable",
+    "description": "On dirait que vous avez pris un mauvais virage sur le sentier.",
+    "backHome": "Retour à la base"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "signOut": "Se déconnecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "rememberMe": "Se souvenir de moi",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "hasAccount": "Vous avez déjà un compte ?"
+  },
+  "cart": {
+    "title": "Panier",
+    "empty": "Votre panier est vide",
+    "total": "Total",
+    "checkout": "Passer la commande",
+    "continueShopping": "Continuer les achats",
+    "remove": "Supprimer",
+    "quantity": "Quantité"
+  },
+  "products": {
+    "title": "Produits",
+    "addToCart": "Ajouter au panier",
+    "outOfStock": "Rupture de stock",
+    "price": "Prix",
+    "description": "Description",
+    "specifications": "Spécifications"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le message",
+    "success": "Message envoyé avec succès !",
+    "error": "Échec de l'envoi du message. Veuillez réessayer."
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}
